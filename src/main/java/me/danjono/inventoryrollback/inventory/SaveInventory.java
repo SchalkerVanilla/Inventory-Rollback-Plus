@@ -169,9 +169,7 @@ public class SaveInventory {
                 dataOutput.close();
                 byte[] byteArr = outputStream.toByteArray();
                 return Base64Coder.encodeLines(byteArr);
-            } catch (Exception e) {
-                throw new IllegalStateException("Unable to save item stacks.", e);
-            }
+            } catch (Exception ignored) {}
         }
 
         return null;
